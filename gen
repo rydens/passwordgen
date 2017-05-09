@@ -1,0 +1,17 @@
+#!/usr/bin/env python3
+import skilstak.colors as c
+import random as r
+
+with open('./words.txt') as infile:
+    answer = [line.strip().split(',') for line in infile]
+
+print(c.green + 'Welcome to the password generator, using random words!')
+print(c.green + 'How many words do you want your password to be?')
+
+words = input(c.red + '> ' + c.cyan)
+
+try:
+    for count in range(int(words)):
+        print(r.choice(answer))
+except ValueError:
+    print(c.red + 'Please enter an integer!')
