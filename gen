@@ -2,9 +2,10 @@
 import skilstak.colors as c
 import random as r
 import sys
+
+
 with open('./words.txt') as infile:
     words = [line.strip().split(',') for line in infile]
-
 
 if len(sys.argv) == 2:
     amount = sys.argv[1]
@@ -15,6 +16,9 @@ else:
 
 try:
     for count in range(int(amount)):
-        print(r.choice(words),end=' ') #on 1 line
+        print(c.green)
+        passwd = r.choice(words)
+        print(passwd,end=' ')
+    print('\n')
 except ValueError:
     print(c.red + 'Please enter an integer!')
