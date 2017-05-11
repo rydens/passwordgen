@@ -15,10 +15,10 @@ else:
     amount = input(c.red + '> ' + c.cyan)
 
 try:
+    print(c.green, end='')
     for count in range(int(amount)):
-        print(c.green)
         passwd = r.choice(words)
         print(passwd,end=' ')
-    print('\n')
+    print()
 except ValueError:
     print(c.red + 'Please enter an integer!')
