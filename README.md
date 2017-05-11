@@ -1,4 +1,4 @@
-#passwordgen
+# passwordgen
 A random-word password generator.
 
 Going off the principal of "Yes, random words are better than random
